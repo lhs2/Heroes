@@ -1,5 +1,5 @@
 //
-//  ComicDataWrapper.swift
+//  CharacterDataWrapper.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 18/02/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-//MARK: - ComicDataWrapper
-struct ComicDataWrapper: Codable {
+//MARK: - CharacterDataWrapper
+public struct CharacterDataWrapper: Codable {
 
     var code : Int?
     var status : String?
