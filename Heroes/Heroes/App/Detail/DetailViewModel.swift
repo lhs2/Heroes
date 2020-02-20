@@ -10,6 +10,36 @@ import UIKit
 import RxSwift
 
 class DetailViewModel {
+    let didPressedButton = PublishSubject<Void>()
     var characterDetail: Character?
+    
+    var characterImagePath: String {
+        guard let character = characterDetail else {
+            return String.Empty
+        }
+        let imagePath = character.getThumbnailPath()
+        return imagePath
+    }
+    
+    var characterDescription: String {
+        guard let character = characterDetail else {
+            return String.Empty
+        }
+        let description = character.description ?? String.Empty
+        return description
+    }
+    
+    var characterName: String {
+        guard let character = characterDetail else {
+            return String.Empty
+        }
+        let name = character.name ?? String.Empty
+        return name
+    }
+    
+    
+    func showExpensiveComic() {
+        didPressedButton.onNext(Void())
+    }
 
 }
