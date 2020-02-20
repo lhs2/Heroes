@@ -23,18 +23,24 @@ class DetailViewModel {
     
     var characterDescription: String {
         guard let character = characterDetail else {
-            return String.Empty
+            return "No description found"
         }
-        let description = character.description ?? String.Empty
-        return description
+        if let description = character.description, !description.isEmpty {
+            return description
+        }
+        
+        return "No description found"
     }
     
     var characterName: String {
         guard let character = characterDetail else {
-            return String.Empty
+            return "No name found"
         }
-        let name = character.name ?? String.Empty
+        if let name = character.name, !name.isEmpty {
         return name
+            
+        }
+        return "No name found"
     }
     
     

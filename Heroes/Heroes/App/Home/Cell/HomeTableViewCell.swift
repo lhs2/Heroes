@@ -40,29 +40,31 @@ class HomeTableViewCell: UITableViewCell {
                 with: picturePath,
                 progress: nil) {
                     response, error in
-                    if error != nil {
-                        // Default image
-                    } else {
+                    if error == nil {
                         self.pictureImageView.image = response?.image
                         self.pictureImageView.contentMode = .scaleAspectFit
                     }
                     
             }
-            Nuke.loadImage(with: picturePath, into: pictureImageView)
         }
         
         setupBorder()
     }
     
     func setupBorder() {
+        let borderColor: UIColor = #colorLiteral(red: 0.231372549, green: 0.3450980392, blue: 0.4745098039, alpha: 1)
+        
         titleLabel.layer.masksToBounds = true
         titleLabel.layer.cornerRadius = titleLabel.bounds.height/3
         titleLabel.layer.borderWidth = 2
         titleLabel.layer.shadowOffset = CGSize(width: -1, height: 2)
-        let borderColor: UIColor = #colorLiteral(red: 0.231372549, green: 0.3450980392, blue: 0.4745098039, alpha: 1)
         titleLabel.layer.borderColor = borderColor.cgColor
         
+        pictureImageView.layer.masksToBounds = true
         pictureImageView.layer.cornerRadius = pictureImageView.bounds.height/2
+        pictureImageView.layer.borderWidth = 2
+        pictureImageView.layer.shadowOffset = CGSize(width: -1, height: 2)
+        pictureImageView.layer.borderColor = borderColor.cgColor
     }
     
     
