@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 
 class HomeService: BaseService  {
     private var offset: Int = 0

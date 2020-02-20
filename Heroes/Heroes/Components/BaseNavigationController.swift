@@ -9,24 +9,37 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.isTranslucent = false
-
-        self.navigationBar.tintColor = .white
-        self.navigationBar.barTintColor = UIColor(displayP3Red: 222/255.0, green: 71/255.0, blue: 114/255.0, alpha: 1)
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
-
+        navigationBar.isTranslucent = false
+        
+        navigationBar.tintColor = .white
+        navigationBar.barTintColor = UIColor(displayP3Red: 5/255.0, green: 60/255.0, blue: 94/255.0, alpha: 1)
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        addNavBarImage()
     }
-    func addNavBarTitle() {
-        navigationItem.title = "Home"
+    
+    
+    func addNavBarImage() {
 
+        let logo = UIImage(named: "ironMan.png")
+
+        let imageView = UIImageView(image:logo)
+        imageView.contentMode = .top
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        navigationBar.addSubview(imageView)
+
+        navigationBar.addConstraint (navigationBar.leftAnchor.constraint(equalTo: imageView.leftAnchor, constant: 0))
+        navigationBar.addConstraint (navigationBar.rightAnchor.constraint(equalTo: imageView.rightAnchor, constant: 0))
+        navigationBar.addConstraint (navigationBar.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 0))
+        navigationBar.addConstraint (navigationBar.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0))
     }
 
 }
+

@@ -15,12 +15,12 @@ extension AppDelegate {
         setupCoordinators()
         setupServices()
         setupViewModels()
-        Container.loggingFunction = nil
     }
 
     private func setupCoordinators(){
         AppDelegate.container.autoregister(AppCoordinator.self, initializer: AppCoordinator.init)
         AppDelegate.container.autoregister(HomeCoordinator.self, initializer:  HomeCoordinator.init)
+        AppDelegate.container.autoregister(DetailCoordinator.self, initializer: DetailCoordinator.init)
 
     }
 
@@ -32,6 +32,7 @@ extension AppDelegate {
         AppDelegate.container.register(HomeViewModel.self) {
             HomeViewModel(homeService: $0.resolve(HomeService.self)!)
         }
+        AppDelegate.container.autoregister(DetailViewModel.self, initializer: DetailViewModel.init)
     }
 
 }
