@@ -19,6 +19,8 @@ class DetailCoordinator: BaseCoordinator {
     }
     
     override func start() {
+        setUpBindings()
+        
         let viewController = DetailView.instantiate()
         viewController.viewModel = viewModel
         
@@ -27,7 +29,28 @@ class DetailCoordinator: BaseCoordinator {
     }
     
     func prepare(for viewModel: DetailViewModel) {
-          self.viewModel = viewModel
+        self.viewModel = viewModel
+    }
+    
+    private func showExpensiveComic() {
+        let coordinator: ComicDetailCoordinator = AppDelegate.container.resolve(ComicDetailCoordinator.self)!
+        coordinator.navigationController = self.navigationController
+        if let character = viewModel.characterDetail {
+            coordinator.prepare(for: character)
+        }
+        self.navigationController.dismiss(animated: true, completion: {
+            self.start(coordinator: coordinator)
+        })
+        
+        
+        
+    }
+    
+    private func setUpBindings() {
+        self.viewModel.didPressedButton
+            .subscribe(onNext: { [weak self] in self?.showExpensiveComic() })
+            .disposed(by: self.disposebag)
+        
     }
     
 }

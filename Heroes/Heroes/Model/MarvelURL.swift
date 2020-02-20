@@ -1,5 +1,5 @@
 //
-//  CharacterURL.swift
+//  MarvelURL.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 18/02/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-//MARK: - CharacterURL
-struct CharacterURL: Codable {
+//MARK: - MarvelURL
+struct MarvelURL: Codable {
     var type: String?
     var url: String?
 }

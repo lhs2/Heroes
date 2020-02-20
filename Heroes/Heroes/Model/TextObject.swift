@@ -1,5 +1,5 @@
 //
-//  ComicDetailService.swift
+//  TextObject.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 20/02/20.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-class ComicDetailService: BaseService  {
-
+//MARK: - TextObject
+struct TextObject: Codable {
+    var type: String?
+    var language: String?
+    var text: String?
 }

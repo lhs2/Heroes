@@ -42,6 +42,7 @@ class DetailView: UIViewController, Storyboarded {
             .asObservable()
             .subscribe(onNext: { _ in
                 guard let viewModel = self.viewModel else { return }
+                self.detailButton.isEnabled = false
                 viewModel.showExpensiveComic()
             },
                        onError: nil,

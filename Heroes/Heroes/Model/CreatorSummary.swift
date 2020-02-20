@@ -1,5 +1,5 @@
 //
-//  ComicDetailService.swift
+//  CreatorSummary.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 20/02/20.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-class ComicDetailService: BaseService  {
-
+//MARK: - Comic
+struct CreatorSummary: Codable {
+    var resourceURI: String?
+    var name: String?
+    var role: String?
 }

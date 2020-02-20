@@ -1,5 +1,5 @@
 //
-//  ComicDetailService.swift
+//  ComicDate.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 20/02/20.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-class ComicDetailService: BaseService  {
-
+//MARK: - ComicDate
+struct ComicDate: Codable {
+    var type: String?
+    var data: Date?
 }

@@ -1,5 +1,5 @@
 //
-//  CharacterImage.swift
+//  MarvelImage.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 18/02/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-//MARK: - CharacterImage
-struct CharacterImage: Codable {
+//MARK: - MarvelImage
+struct MarvelImage: Codable {
     var path: String?
     var `extension`: String?
 }

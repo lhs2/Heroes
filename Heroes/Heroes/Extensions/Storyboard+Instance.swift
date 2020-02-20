@@ -27,4 +27,5 @@ extension Storyboarded {
 enum StoryboardType: String {
     case home = "Home"
     case detail = "Detail"
+    case comicDetail = "ComicDetail"
 }

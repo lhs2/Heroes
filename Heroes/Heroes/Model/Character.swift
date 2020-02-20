@@ -15,8 +15,8 @@ struct Character: Codable {
     var description: String?
     var modified: String?
     var resourceURI: String?
-    var urls: [CharacterURL]?
-    var thumbnail: CharacterImage?
+    var urls: [MarvelURL]?
+    var thumbnail: MarvelImage?
     var comics: ComicList?
     var stories: StoryList?
     var events: EventList?

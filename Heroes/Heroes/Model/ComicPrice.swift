@@ -1,5 +1,5 @@
 //
-//  ComicDetailService.swift
+//  ComicPrice.swift
 //  Heroes
 //
 //  Created by Luiz Henrique de Sousa on 20/02/20.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-class ComicDetailService: BaseService  {
-
+//MARK: - ComicPrice
+struct ComicPrice: Codable {
+    var type: String?
+    var price: Float?
 }

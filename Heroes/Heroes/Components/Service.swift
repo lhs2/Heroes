@@ -34,12 +34,16 @@ class Service {
     
     
     enum Endpoint: String {
-        case characterList = "Get Comic List"
+        case characterList = "Get Character List"
+        case comicList = "Get Comic List"
         
         
         internal var method: HTTPMethod {
             switch self {
             case .characterList      : return .get
+            case .comicList          : return .get
+                
+                
                 
             }
         }
@@ -50,13 +54,18 @@ class Service {
                 let timestamp = "\(Date.timestamp)"
                 let hash = Data.MD5(timestamp: timestamp, privateKey: Service.apiKeyPrivate, publicKey: Service.apiKeyPublic) .map { String(format: "%02hhx", $0) }.joined()
                 return "public/characters?offset=%@&limit=20&apikey=\(Service.apiKeyPublic)&ts=\(timestamp)&hash=\(hash)"
+                
+            case .comicList:
+                let timestamp = "\(Date.timestamp)"
+                let hash = Data.MD5(timestamp: timestamp, privateKey: Service.apiKeyPrivate, publicKey: Service.apiKeyPublic) .map { String(format: "%02hhx", $0) }.joined()
+                return "public/comic?offset=%@&limit=20&apikey=\(Service.apiKeyPublic)&ts=\(timestamp)&hash=\(hash)"
             }
         }
         
         
         fileprivate var headers: HTTPHeaders {
             switch self {
-            case .characterList:
+            default:
                 return [
                     "Accept": "application/json"
                 ]
