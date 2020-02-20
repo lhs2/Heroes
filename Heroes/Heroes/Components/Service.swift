@@ -32,19 +32,16 @@ class Service {
     static let apiKeyPrivate = "a583bb4154494bc3984ff976ba777a6a41c64b7f"
     private let manager: Alamofire.Session!
     
-    
-    enum Endpoint: String {
-        case characterList = "Get Character List"
-        case comicList = "Get Comic List"
+    enum Endpoint {
+        case characterList
+        case comicList
         
         
         internal var method: HTTPMethod {
             switch self {
             case .characterList      : return .get
             case .comicList          : return .get
-                
-                
-                
+     
             }
         }
         
@@ -58,10 +55,9 @@ class Service {
             case .comicList:
                 let timestamp = "\(Date.timestamp)"
                 let hash = Data.MD5(timestamp: timestamp, privateKey: Service.apiKeyPrivate, publicKey: Service.apiKeyPublic) .map { String(format: "%02hhx", $0) }.joined()
-                return "public/comic?offset=%@&limit=20&apikey=\(Service.apiKeyPublic)&ts=\(timestamp)&hash=\(hash)"
+                return "public/characters/%@/comics?limit=30&apikey=\(Service.apiKeyPublic)&ts=\(timestamp)&hash=\(hash)"
             }
         }
-        
         
         fileprivate var headers: HTTPHeaders {
             switch self {
@@ -72,7 +68,6 @@ class Service {
                 
             }
         }
-        
         
     }
     
@@ -103,6 +98,5 @@ class Service {
             })
         
     }
-    
     
 }

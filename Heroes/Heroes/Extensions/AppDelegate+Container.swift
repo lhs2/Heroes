@@ -37,7 +37,7 @@ extension AppDelegate {
         }
         AppDelegate.container.autoregister(DetailViewModel.self, initializer: DetailViewModel.init)
         AppDelegate.container.register(ComicDetailViewModel.self) {
-            ComicDetailViewModel(homeService: $0.resolve(ComicDetailService.self)!)
+            ComicDetailViewModel(comicDetailService: $0.resolve(ComicDetailService.self)!)
         }
     }
 

@@ -30,8 +30,8 @@ class HomeService: BaseService  {
                                         completion(nil, customError)
                                     case .success(let data):
                                         do {
-                                            let issueList = try JSONDecoder().decode(CharacterDataWrapper.self, from: data)
-                                            completion(issueList, nil)
+                                            let characterList = try JSONDecoder().decode(CharacterDataWrapper.self, from: data)
+                                            completion(characterList, nil)
                                         } catch {
                                             completion(nil, CustomError(with:.parserError))
                                         }

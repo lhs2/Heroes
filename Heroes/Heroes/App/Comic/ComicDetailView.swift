@@ -16,5 +16,10 @@ class ComicDetailView: UIViewController, Storyboarded {
     var viewModel : ComicDetailViewModel?
     
     // MARK: - Outlet
+    override func viewWillAppear(_ animated: Bool) {
+        if let viewModel = viewModel {
+            viewModel.requestList()
+        }
+    }
 
 }
