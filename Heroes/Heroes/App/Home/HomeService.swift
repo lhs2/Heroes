@@ -10,11 +10,37 @@ import Foundation
 import Alamofire
 
 class HomeService: BaseService  {
-
-    override func get<ComicDataWrapper>(
-    completion: @escaping (ComicDataWrapper?, CustomError?) -> Void) {
-        //
+    private var offset: Int = 0
+    
+    func updateOffset(to value: Int) {
+        offset = value
     }
     
+    override func get<CharacterDataWrapper>(
+        completion: @escaping (CharacterDataWrapper?, CustomError?) -> Void) -> CharacterDataWrapper? where CharacterDataWrapper: Codable{
+        let queryOffset = "\(offset)" as CVarArg
+        let queryParameters = [queryOffset]
+        Service.shared.request(.characterList,
+                                 queryParameters,
+                                 nil) { result in
+                                    switch result {
+                                    case .failure( let error):
+                                        let customError = CustomError(error, type: .serviceError)
+                                        
+                                        completion(nil, customError)
+                                    case .success(let data):
+                                        do {
+                                            let issueList = try JSONDecoder().decode(CharacterDataWrapper.self, from: data)
+                                            completion(issueList, nil)
+                                        } catch {
+                                            completion(nil, CustomError(with:.parserError))
+                                        }
+                                        
+                                    }
+                                    
+        }
+        return nil
+    }
+    
+    
 }
-

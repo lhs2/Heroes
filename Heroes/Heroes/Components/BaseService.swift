@@ -12,14 +12,14 @@ import Foundation
 import Foundation
 import UIKit
 
-protocol Service: AnyObject {
-    
-    func get<T>(completion: @escaping (T?, CustomError?) -> Void) where T: Codable
+protocol ServiceProtocol: AnyObject {
+    @discardableResult
+    func get<T: Codable>(completion: @escaping (T?, CustomError?) -> Void) -> T?
 
 }
 
-class BaseService: Service {
-    func get<T>(completion: @escaping (T?, CustomError?) -> Void) where T : Codable {
+class BaseService: ServiceProtocol {
+    func get<T>(completion: @escaping (T?, CustomError?) -> Void) -> T? where T : Codable {
         fatalError("Not implemented Get from \(#function)")
     }
     

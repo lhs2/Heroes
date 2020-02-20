@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Nuke
 
 class HomeTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -27,9 +30,25 @@ class HomeTableViewCell: UITableViewCell {
         setupBorder()
     }
     
-    func configureCell(with comic: Comic) {
-        if let comicTitle = comic.title {
-            titleLabel.text = comicTitle
+    func configureCell(with character: Character) {
+        if let characterName = character.name {
+            titleLabel.text = characterName
+        }
+        
+        if let picturePath = URL(string: character.getThumbnailPath()) {
+            ImagePipeline.shared.loadImage(
+                with: picturePath,
+                progress: nil) {
+                    response, error in
+                    if error != nil {
+                        // Default image
+                    } else {
+                        self.pictureImageView.image = response?.image
+                        self.pictureImageView.contentMode = .scaleAspectFit
+                    }
+                    
+            }
+            Nuke.loadImage(with: picturePath, into: pictureImageView)
         }
         
         setupBorder()
@@ -42,6 +61,8 @@ class HomeTableViewCell: UITableViewCell {
         titleLabel.layer.shadowOffset = CGSize(width: -1, height: 2)
         let borderColor: UIColor = #colorLiteral(red: 0.231372549, green: 0.3450980392, blue: 0.4745098039, alpha: 1)
         titleLabel.layer.borderColor = borderColor.cgColor
+        
+        pictureImageView.layer.cornerRadius = pictureImageView.bounds.height/2
     }
     
     

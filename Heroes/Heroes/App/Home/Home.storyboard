@@ -10,7 +10,7 @@
         <!--Home View-->
         <scene sceneID="Sgh-2z-TTt">
             <objects>
-                <viewController storyboardIdentifier="HomeView" id="qbS-mk-KyY" customClass="HomeView" customModule="MarvelList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" id="qbS-mk-KyY" customClass="HomeView" customModule="Heroes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8k9-rc-y40">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="Lrr-Pu-vI9"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="srx-BZ-E5k" id="NfU-KI-KU2"/>
+                        <outlet property="tableView" destination="srx-BZ-E5k" id="mV4-Ko-YlZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjU-RF-rSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

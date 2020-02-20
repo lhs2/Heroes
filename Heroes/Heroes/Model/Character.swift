@@ -13,7 +13,7 @@ struct Character: Codable {
     var id : Int?
     var name: String?
     var description: String?
-    var modified: Date?
+    var modified: String?
     var resourceURI: String?
     var urls: [CharacterURL]?
     var thumbnail: CharacterImage?

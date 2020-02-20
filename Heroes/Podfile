@@ -11,6 +11,7 @@ target 'Heroes' do
         pod 'RxCocoa', '~> 5'
 	pod 'Swinject'
 	pod 'SwinjectAutoregistration'
+	pod 'NVActivityIndicatorView'
 	pod 'Nuke', '~> 7.0'
 
   target 'HeroesTests' do
