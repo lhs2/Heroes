@@ -25,6 +25,40 @@ class ComicDetailViewModel {
         }
     }
     
+    private var expensivePrice: Float = 0.0
+    
+    //MARK: - UI Information
+    var characterImagePath: String {
+        guard let comic = expensiveComic else {
+            return String.Empty
+        }
+        let imagePath = comic.getFirstImageAvailable()
+        return imagePath
+    }
+    
+    var characterDescription: String {
+        guard let character = characterDetail else {
+            return "No description found"
+        }
+        if let description = character.description, !description.isEmpty {
+            return description
+        }
+        
+        return "No description found"
+    }
+    
+    var characterName: String {
+        guard let character = characterDetail else {
+            return "USD:\(expensivePrice) - No name found"
+        }
+        if let name = character.name, !name.isEmpty {
+            return "USD:\(expensivePrice) - \(name)"
+            
+        }
+        return "USD:\(expensivePrice) - No name found"
+    }
+    
+    //MARK: - Binding
     let isSuccess : Variable<Bool> = Variable(false)
     let isLoading : Variable<Bool> = Variable(false)
     let errorMsg  : Variable<String> = Variable(String.Empty)
@@ -75,7 +109,9 @@ class ComicDetailViewModel {
         guard comicList.count > 0,
             let comic: Comic = searchExpensiveComic()
             else {
-                
+                self.isSuccess.value = false
+                self.isLoading.value = false
+                self.errorMsg.value =  "No comic available for this character"
                 return
         }
         
@@ -95,13 +131,14 @@ class ComicDetailViewModel {
                 }
             }
         }
+        expensivePrice = bestMaxPrice
         return bestComic
     }
     
     private func getMostExpensivePrice(with priceList: [ComicPrice]) -> Float {
         var bestPrice: Float = 0.0
         for prices in priceList {
-            if let cost = prices.price, bestPrice < cost {
+            if let cost = prices.price, cost > bestPrice {
                 bestPrice = cost
             }
         }
