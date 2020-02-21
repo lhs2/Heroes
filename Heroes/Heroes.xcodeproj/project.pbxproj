@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13A767223FF575D002A1B49 /* XCTestCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A767123FF575D002A1B49 /* XCTestCase+Mock.swift */; };
+		C13A767523FF578A002A1B49 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A767423FF578A002A1B49 /* MockService.swift */; };
+		C13A767823FF58C1002A1B49 /* Comic.json in Resources */ = {isa = PBXBuildFile; fileRef = C13A767723FF58C1002A1B49 /* Comic.json */; };
+		C13A767A23FF5931002A1B49 /* Char.json in Resources */ = {isa = PBXBuildFile; fileRef = C13A767923FF5931002A1B49 /* Char.json */; };
+		C13A767C23FF5E88002A1B49 /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A767B23FF5E88002A1B49 /* HomeCoordinatorTests.swift */; };
+		C13A767E23FF5EBC002A1B49 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A767D23FF5EBC002A1B49 /* AppCoordinatorTests.swift */; };
+		C1CFD3D423FF611900EDA739 /* CustomErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CFD3D323FF611900EDA739 /* CustomErrorTests.swift */; };
+		C1CFD3D623FF624C00EDA739 /* DetailCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CFD3D523FF624C00EDA739 /* DetailCoordinatorTests.swift */; };
+		C1CFD3D823FF625D00EDA739 /* ComicDetailCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CFD3D723FF625D00EDA739 /* ComicDetailCoordinatorTests.swift */; };
 		C1D4A7F923FF1B51001A2E01 /* ComicDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4A7F823FF1B51001A2E01 /* ComicDetailCoordinator.swift */; };
 		C1D4A7FC23FF1B5C001A2E01 /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4A7FB23FF1B5C001A2E01 /* ComicDetailView.swift */; };
 		C1D4A7FE23FF1B64001A2E01 /* ComicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4A7FD23FF1B64001A2E01 /* ComicDetailViewModel.swift */; };
@@ -78,6 +87,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C13A767123FF575D002A1B49 /* XCTestCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Mock.swift"; sourceTree = "<group>"; };
+		C13A767423FF578A002A1B49 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		C13A767723FF58C1002A1B49 /* Comic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comic.json; sourceTree = "<group>"; };
+		C13A767923FF5931002A1B49 /* Char.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Char.json; sourceTree = "<group>"; };
+		C13A767B23FF5E88002A1B49 /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCoordinatorTests.swift; path = HeroesTests/HomeCoordinatorTests.swift; sourceTree = SOURCE_ROOT; };
+		C13A767D23FF5EBC002A1B49 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppCoordinatorTests.swift; path = HeroesTests/AppCoordinatorTests.swift; sourceTree = SOURCE_ROOT; };
+		C1CFD3D323FF611900EDA739 /* CustomErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorTests.swift; sourceTree = "<group>"; };
+		C1CFD3D523FF624C00EDA739 /* DetailCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorTests.swift; sourceTree = "<group>"; };
+		C1CFD3D723FF625D00EDA739 /* ComicDetailCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailCoordinatorTests.swift; sourceTree = "<group>"; };
 		C1D4A7F823FF1B51001A2E01 /* ComicDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailCoordinator.swift; sourceTree = "<group>"; };
 		C1D4A7FB23FF1B5C001A2E01 /* ComicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailView.swift; sourceTree = "<group>"; };
 		C1D4A7FD23FF1B64001A2E01 /* ComicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +185,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C13A767023FF574A002A1B49 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C13A767123FF575D002A1B49 /* XCTestCase+Mock.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C13A767323FF576D002A1B49 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C13A767423FF578A002A1B49 /* MockService.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		C13A767623FF58A9002A1B49 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C1ECB4D923FC3A10000B931F /* AppDelegate.swift */,
+				C13A767723FF58C1002A1B49 /* Comic.json */,
+				C13A767923FF5931002A1B49 /* Char.json */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C1D4A7F723FF1B0C001A2E01 /* Comic */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,11 +268,11 @@
 		C1ECB4D823FC3A10000B931F /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				C13A767623FF58A9002A1B49 /* Base */,
 				C1ECB51823FC8758000B931F /* Model */,
 				C1ECB50B23FC3CFC000B931F /* Extensions */,
 				C1ECB50523FC3CB6000B931F /* Components */,
 				C1ECB4FB23FC3C07000B931F /* App */,
-				C1ECB4D923FC3A10000B931F /* AppDelegate.swift */,
 				C1ECB4E223FC3A12000B931F /* Assets.xcassets */,
 				C1ECB4E423FC3A12000B931F /* LaunchScreen.storyboard */,
 				C1ECB4E723FC3A12000B931F /* Info.plist */,
@@ -239,8 +283,15 @@
 		C1ECB4EF23FC3A12000B931F /* HeroesTests */ = {
 			isa = PBXGroup;
 			children = (
+				C13A767323FF576D002A1B49 /* Component */,
+				C13A767023FF574A002A1B49 /* Extension */,
 				C1ECB4F023FC3A12000B931F /* HeroesTests.swift */,
+				C13A767D23FF5EBC002A1B49 /* AppCoordinatorTests.swift */,
+				C13A767B23FF5E88002A1B49 /* HomeCoordinatorTests.swift */,
+				C1CFD3D323FF611900EDA739 /* CustomErrorTests.swift */,
 				C1ECB4F223FC3A12000B931F /* Info.plist */,
+				C1CFD3D523FF624C00EDA739 /* DetailCoordinatorTests.swift */,
+				C1CFD3D723FF625D00EDA739 /* ComicDetailCoordinatorTests.swift */,
 			);
 			path = HeroesTests;
 			sourceTree = "<group>";
@@ -408,8 +459,10 @@
 				C1DB8FF623FCA9A7004E5916 /* Home.storyboard in Resources */,
 				C1ECB4E623FC3A12000B931F /* LaunchScreen.storyboard in Resources */,
 				C1ECB4E323FC3A12000B931F /* Assets.xcassets in Resources */,
+				C13A767823FF58C1002A1B49 /* Comic.json in Resources */,
 				C1D4A80223FF1F0D001A2E01 /* ComicDetail.storyboard in Resources */,
 				C1DB902223FE05DC004E5916 /* Detail.storyboard in Resources */,
+				C13A767A23FF5931002A1B49 /* Char.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +539,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CFD3D623FF624C00EDA739 /* DetailCoordinatorTests.swift in Sources */,
+				C1CFD3D823FF625D00EDA739 /* ComicDetailCoordinatorTests.swift in Sources */,
+				C13A767E23FF5EBC002A1B49 /* AppCoordinatorTests.swift in Sources */,
+				C13A767223FF575D002A1B49 /* XCTestCase+Mock.swift in Sources */,
+				C13A767C23FF5E88002A1B49 /* HomeCoordinatorTests.swift in Sources */,
+				C1CFD3D423FF611900EDA739 /* CustomErrorTests.swift in Sources */,
 				C1ECB4F123FC3A12000B931F /* HeroesTests.swift in Sources */,
+				C13A767523FF578A002A1B49 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

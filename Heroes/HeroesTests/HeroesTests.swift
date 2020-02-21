@@ -11,24 +11,37 @@ import XCTest
 
 class HeroesTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testMockCharacter() {
+        let charList = self.loadCharacterListMock()
+        XCTAssertNotNil(charList)
+        
+        var charItem = charList.first
+        XCTAssertNotNil(charItem)
+        
+        var path = charItem?.getThumbnailPath() ?? String.Empty
+        XCTAssert(path.isEmpty)
+        
+        XCTAssert(charList.count > 2)
+        charItem = charList[1]
+        path = charItem?.getThumbnailPath() ?? String.Empty
+        XCTAssert(!path.isEmpty)
+    }
+    
+    func testMockComic() {
+        let comicList = self.loadComicListMock()
+        XCTAssertNotNil(comicList)
+        
+        var comicItem = comicList.first
+        XCTAssertNotNil(comicItem)
+        
+        var path = comicItem?.getFirstImageAvailable() ?? String.Empty
+        XCTAssert(path.isEmpty)
+        
+        XCTAssert(comicList.count > 2)
+        comicItem = comicList[1]
+        path = comicItem?.getFirstImageAvailable() ?? String.Empty
+        XCTAssert(!path.isEmpty)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }
