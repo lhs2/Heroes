@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View-->
+        <scene sceneID="Cjn-YH-lXj">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="tct-0t-V3i" customClass="DetailView" customModule="Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oT4-L0-rMS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-z7-bKl">
+                                <rect key="frame" x="24" y="392" width="366" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PSk-XG-Oct"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34509803919999998" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luv-9W-23g" userLabel="Description">
+                                <rect key="frame" x="24" y="446" width="366" height="362"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34509803919999998" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emc-ZC-wBo">
+                                <rect key="frame" x="24" y="832" width="366" height="40"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34509803919999998" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vp0-KR-i3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="Most expensive comic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12B-cv-BzR">
+                                <rect key="frame" x="100" y="68" width="214" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="12B-cv-BzR" secondAttribute="height" multiplier="107:150" id="fRF-HU-eqL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960784313726" green="0.85882352941176465" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oX0-z7-bKl" firstAttribute="centerX" secondItem="oT4-L0-rMS" secondAttribute="centerX" id="0Nr-fh-opq"/>
+                            <constraint firstItem="xUn-b9-K5h" firstAttribute="trailing" secondItem="12B-cv-BzR" secondAttribute="trailing" constant="100" id="4bt-zm-k8f"/>
+                            <constraint firstItem="emc-ZC-wBo" firstAttribute="leading" secondItem="xUn-b9-K5h" secondAttribute="leading" constant="24" id="7L5-G0-LDw"/>
+                            <constraint firstItem="emc-ZC-wBo" firstAttribute="top" secondItem="luv-9W-23g" secondAttribute="bottom" constant="24" id="BxN-ip-sQ4"/>
+                            <constraint firstItem="luv-9W-23g" firstAttribute="leading" secondItem="xUn-b9-K5h" secondAttribute="leading" constant="24" id="CyN-wd-zBK"/>
+                            <constraint firstItem="xUn-b9-K5h" firstAttribute="trailing" secondItem="emc-ZC-wBo" secondAttribute="trailing" constant="24" id="DpS-tR-43Q"/>
+                            <constraint firstAttribute="bottom" secondItem="emc-ZC-wBo" secondAttribute="bottom" constant="24" id="IRb-8k-QRN"/>
+                            <constraint firstItem="oX0-z7-bKl" firstAttribute="top" secondItem="12B-cv-BzR" secondAttribute="bottom" constant="24" id="OeI-bC-oiz"/>
+                            <constraint firstItem="luv-9W-23g" firstAttribute="centerX" secondItem="oT4-L0-rMS" secondAttribute="centerX" id="dW2-HZ-K9S"/>
+                            <constraint firstItem="12B-cv-BzR" firstAttribute="centerX" secondItem="oT4-L0-rMS" secondAttribute="centerX" id="dm3-or-7qW"/>
+                            <constraint firstItem="xUn-b9-K5h" firstAttribute="trailing" secondItem="luv-9W-23g" secondAttribute="trailing" constant="24" id="iJX-bu-0fZ"/>
+                            <constraint firstItem="luv-9W-23g" firstAttribute="top" secondItem="oX0-z7-bKl" secondAttribute="bottom" constant="24" id="iyV-NV-gL9"/>
+                            <constraint firstItem="oX0-z7-bKl" firstAttribute="leading" secondItem="xUn-b9-K5h" secondAttribute="leading" constant="24" id="l9v-6l-4yt"/>
+                            <constraint firstItem="12B-cv-BzR" firstAttribute="leading" secondItem="xUn-b9-K5h" secondAttribute="leading" constant="100" id="qzV-Ab-uU6"/>
+                            <constraint firstItem="12B-cv-BzR" firstAttribute="top" secondItem="xUn-b9-K5h" secondAttribute="top" constant="24" id="ubx-8v-oUg"/>
+                            <constraint firstItem="xUn-b9-K5h" firstAttribute="trailing" secondItem="oX0-z7-bKl" secondAttribute="trailing" constant="24" id="vyO-w1-wy6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xUn-b9-K5h"/>
+                    </view>
+                    <connections>
+                        <outlet property="charImage" destination="12B-cv-BzR" id="WL4-H7-8yk"/>
+                        <outlet property="descriptionLabel" destination="luv-9W-23g" id="OLf-S0-s0d"/>
+                        <outlet property="detailButton" destination="emc-ZC-wBo" id="HcV-px-a8g"/>
+                        <outlet property="nameLabel" destination="oX0-z7-bKl" id="ANg-rI-kUB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYm-Yv-hii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="23.4375"/>
+        </scene>
+    </scenes>
+</document>

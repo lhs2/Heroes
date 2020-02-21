@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XUh-a3-7DO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Comic Detail View-->
+        <scene sceneID="FNd-4S-hP9">
+            <objects>
+                <viewController storyboardIdentifier="ComicDetailView" id="XUh-a3-7DO" customClass="ComicDetailView" customModule="Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="poM-da-mhm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for the most expensive comic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-XV-MGv">
+                                <rect key="frame" x="24" y="392" width="366" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="O8I-dO-cLl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34509803919999998" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azv-HU-nq4" userLabel="Description">
+                                <rect key="frame" x="24" y="486" width="366" height="352"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34509803919999998" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fjw-Hn-DZB">
+                                <rect key="frame" x="100" y="68" width="214" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fjw-Hn-DZB" secondAttribute="height" multiplier="107:150" id="KJg-Js-A2X"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.85882352939999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R54-j8-C00" firstAttribute="bottom" secondItem="azv-HU-nq4" secondAttribute="bottom" constant="24" id="32j-j6-sVL"/>
+                            <constraint firstItem="azv-HU-nq4" firstAttribute="top" secondItem="6Pu-XV-MGv" secondAttribute="bottom" constant="24" id="3J7-Kv-hWz"/>
+                            <constraint firstItem="R54-j8-C00" firstAttribute="trailing" secondItem="azv-HU-nq4" secondAttribute="trailing" constant="24" id="51e-8V-vVk"/>
+                            <constraint firstItem="6Pu-XV-MGv" firstAttribute="centerX" secondItem="poM-da-mhm" secondAttribute="centerX" id="6il-4z-he4"/>
+                            <constraint firstItem="Fjw-Hn-DZB" firstAttribute="leading" secondItem="R54-j8-C00" secondAttribute="leading" constant="100" id="AoG-GK-afi"/>
+                            <constraint firstItem="azv-HU-nq4" firstAttribute="leading" secondItem="R54-j8-C00" secondAttribute="leading" constant="24" id="Ba7-ly-JUq"/>
+                            <constraint firstItem="Fjw-Hn-DZB" firstAttribute="centerX" secondItem="poM-da-mhm" secondAttribute="centerX" id="LeH-VR-yz5"/>
+                            <constraint firstItem="6Pu-XV-MGv" firstAttribute="top" secondItem="Fjw-Hn-DZB" secondAttribute="bottom" constant="24" id="Tu4-W1-WIk"/>
+                            <constraint firstItem="Fjw-Hn-DZB" firstAttribute="top" secondItem="R54-j8-C00" secondAttribute="top" constant="24" id="iPk-kJ-7vt"/>
+                            <constraint firstItem="R54-j8-C00" firstAttribute="trailing" secondItem="Fjw-Hn-DZB" secondAttribute="trailing" constant="100" id="jmx-2s-SSc"/>
+                            <constraint firstItem="R54-j8-C00" firstAttribute="trailing" secondItem="6Pu-XV-MGv" secondAttribute="trailing" constant="24" id="l7D-IQ-Feo"/>
+                            <constraint firstItem="6Pu-XV-MGv" firstAttribute="leading" secondItem="R54-j8-C00" secondAttribute="leading" constant="24" id="pVt-2m-IIh"/>
+                            <constraint firstItem="azv-HU-nq4" firstAttribute="centerX" secondItem="poM-da-mhm" secondAttribute="centerX" id="qZo-f4-XW0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R54-j8-C00"/>
+                    </view>
+                    <connections>
+                        <outlet property="comicDescription" destination="azv-HU-nq4" id="H06-yU-Ew3"/>
+                        <outlet property="comicTitle" destination="6Pu-XV-MGv" id="Dyy-Ng-zgb"/>
+                        <outlet property="comicView" destination="Fjw-Hn-DZB" id="nWd-1T-h7i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Gj-5c-d1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="181"/>
+        </scene>
+    </scenes>
+</document>
